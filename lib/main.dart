@@ -147,7 +147,7 @@ class _MyHomePageState extends State<MyHomePage> {
       child: TransactionList(_userTransactions, _deleteTransaction),
     );
 
-    final pageBody = SingleChildScrollView(
+    final pageBody = SafeArea(child: SingleChildScrollView(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 // crossAxisAlignment: CrossAxisAlignment.center,
@@ -156,7 +156,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('Show chart'),
+                        Text('Show chart' ,style: Theme.of(context).textTheme.title),
                         Switch.adaptive(
                           activeColor: Theme.of(context).accentColor,
                           value: _showChart,
@@ -188,6 +188,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
+          );
 
     return Platform.isIOS
         ? CupertinoPageScaffold(child: pageBody, navigationBar: ,)

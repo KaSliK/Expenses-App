@@ -43,7 +43,7 @@ class TransactionList extends StatelessWidget {
                       child: Padding(
                         padding: EdgeInsets.all(6),
                         child: FittedBox(
-                          child: Text('\$${transactions[index].amount}'),
+                          child: Text('${transactions[index].amount} PLN'),
                         ),
                       ),
                     ),
@@ -52,7 +52,7 @@ class TransactionList extends StatelessWidget {
                       style: Theme.of(context).textTheme.title,
                     ),
                     subtitle: Text(
-                        DateFormat.yMMMd().format(transactions[index].date)),
+                        DateFormat('dd.MM.y').format(transactions[index].date)),
                     trailing: MediaQuery.of(context).size.width > 460 ? FlatButton.icon(
                       icon: Icon(Icons.delete),
                       label: Text('Delete'),

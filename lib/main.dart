@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Expenses App',
+      title: 'Aplikacja historii wydatków',
       theme: ThemeData(
           primarySwatch: Colors.green,
           accentColor: Colors.amber,
@@ -115,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
     final PreferredSizeWidget appBar = Platform.isIOS
     ? CupertinoNavigationBar(
       middle:Text(
-        'Personal Expenses',
+        'Wydatki osobiste',
       ),
       trailing: Row(
         mainAxisSize: MainAxisSize.min,
@@ -129,7 +129,7 @@ class _MyHomePageState extends State<MyHomePage> {
     )
     : AppBar(
       title: Text(
-        'Personal Expenses',
+        'Wydatki osobiste',
       ),
       actions: [
         IconButton(
@@ -191,7 +191,7 @@ class _MyHomePageState extends State<MyHomePage> {
           );
 
     return Platform.isIOS
-        ? CupertinoPageScaffold(child: pageBody, navigationBar: ,)
+        ? CupertinoPageScaffold(child: pageBody, )
         : Scaffold(
             appBar: appBar,
             body: pageBody,
